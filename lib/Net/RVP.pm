@@ -513,13 +513,6 @@ sub notify {
   my ($uri,$top) = $req->uri();
   $uri = URI->new($uri) unless ref $uri;
 
-  # log everything...
-  use Data::Dumper;
-  open SERVER, '>>server.log' or die $!;
-  print SERVER
-   (scalar localtime()).":\n".$req->as_string()."\n";
-  close SERVER;
-
   # notification to our node
   if($req->method() eq 'NOTIFY' and $uri->path() eq '/') {
     $top = $self->_findTree($self->_parseXML($req->content()),'r:notification');

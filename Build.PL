@@ -4,7 +4,7 @@ use Module::Build;
 
 my $build = Module::Build->new(
  dist_name    => 'Net-RVP',
- dist_version => '0.01',
+ dist_version => '0.02',
  license => 'perl',
  requires     => {
   perl                => '5.6.0',
