@@ -1,0 +1,37 @@
+--- #YAML:1.0
+name: Net-RVP
+version: 0.01
+license: perl
+distribution_type: module
+requires:
+  Authen::NTLM: 1.02
+  Digest::MD5: 0
+  Event: 0
+  Event::IO::Record: 0
+  Event::IO::Server: 0
+  HTTP::Parser: 0.02
+  LWP::UserAgent: 0
+  Time::HiRes: 0
+  URI: 0
+  XML::Simple: 0
+  perl: 5.6.0
+recommends: {}
+build_requires: {}
+conflicts: {}
+provides:
+  Net::RVP:
+    file: lib/Net/RVP.pm
+    version: ~
+  Net::RVP::Server:
+    file: lib/Net/RVP/Server.pm
+    version: ~
+  Net::RVP::Session:
+    file: lib/Net/RVP/Session.pm
+    version: ~
+  Net::RVP::Sink:
+    file: lib/Net/RVP/Sink.pm
+    version: ~
+  Net::RVP::User:
+    file: lib/Net/RVP/User.pm
+    version: ~
+generated_by: Module::Build version 0.18
